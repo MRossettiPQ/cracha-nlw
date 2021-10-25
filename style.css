@@ -1,3 +1,18 @@
+.responsive-height {
+  width: 100%;
+  height: 100vh;
+  max-height: 1080px;
+}
+
+.responsive-width {
+  width: 100vw;
+  max-width: 1920px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
 * {
   margin: 0;
 }
@@ -20,6 +35,7 @@ main {
   width: 100vw;
   min-height: 812px;
   height: 100vh;
+  position: relative;
 }
 
 .container {
@@ -81,9 +97,10 @@ ul {
 }
 
 @media (min-width: 720px) {
-  /* Adidionando cor ao body */
   body {
-    background: #121214;
+    background: url(images/background-desktop.svg) no-repeat center/cover;
+    width: 100vw;
+    height: 100vh;
   }
 
   main {
@@ -105,17 +122,16 @@ ul {
     margin-left: -38px;
     top: 30px;
   }
-
   .container::after {
     content: '';
-    background: linear-gradient(161.24deg, #ff008e -15.25%, #ffcd1e 111.89%);
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    width: 64px;
-    height: 92px;
+    background: url(images/faixa.svg) no-repeat center/cover;
+    width: 80px;
+    height: 158px;
     position: absolute;
-    top: -60px;
-    margin-left: -31px;
+    top: -120px;
+    margin-left: -40px;
+    z-index: 999;
+    overflow: visible;
   }
 
   .avatar {
